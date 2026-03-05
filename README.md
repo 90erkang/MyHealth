@@ -85,6 +85,8 @@ MyHealth는 운동 관리부터 식단 기록, Google Fit 실시간 연동, Gemi
 | Google Gemini | gemini-2.5-flash | AI 트레이너 챗봇 |
 | Google Fit REST API | OAuth 2.0 | 실시간 건강 데이터 |
 | 공공데이터포털 식품영양성분 DB | REST API | 식단 칼로리 검색 |
+| 공공데이터포털 국민체력100 | REST API | 운동 동영상 검색 |
+| 공공데이터포털 보건소 모바일 헬스케어 운동 | REST API | 운동 칼로리 검색 |
 | Gmail SMTP | STARTTLS / 587 포트 | 비밀번호 재설정 메일 |
 
 <br>
