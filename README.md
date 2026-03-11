@@ -460,4 +460,4 @@ google:
 
 ## 👨‍💻 개발자
 
-- **ㅈ대로** - Full-Stack Developer
+- **강동윤** - Full-Stack Developer
