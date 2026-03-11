@@ -245,12 +245,12 @@ MyHealth/
 ## 📡 API 명세
 
 ### 인증 `/api/auth`
-| Method | URL | 설명 | 인증 |
-|--------|-----|------|------|
-| POST | `/api/auth/login` | 로그인 → JWT 반환 | ❌ |
-| POST | `/api/auth/signup` | 회원가입 | ❌ |
-| POST | `/api/auth/find-pw` | 비밀번호 찾기 이메일 발송 | ❌ |
-| POST | `/api/auth/reset-pw` | 비밀번호 재설정 | ❌ |
+| Method | URL | 설명 | 
+|--------|-----|------|
+| POST | `/api/auth/login` | 로그인 → JWT 반환 |
+| POST | `/api/auth/signup` | 회원가입 |
+| POST | `/api/auth/find-pw` | 비밀번호 찾기 이메일 발송 |
+| POST | `/api/auth/reset-pw` | 비밀번호 재설정 |
 
 ### 식단 `/api/diet`
 | Method | URL | 설명 |
