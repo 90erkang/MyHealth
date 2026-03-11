@@ -1,0 +1,336 @@
+/* =============================================
+   MY HEALTH - 공통 스타일 (common.css)
+   모든 페이지에서 import하여 사용
+   ============================================= */
+
+/* --- 유리 박스 (Glass Morphism) --- */
+.glass-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+/* --- 뒤로가기 링크 --- */
+.back-link {
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: #fff;
+}
+
+/* --- 섹션 헤더 --- */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e67e22;
+}
+.section-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* --- 버튼 --- */
+.btn-primary {
+  padding: 10px 20px;
+  background: #e67e22;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background: #d35400;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 8px 0;
+}
+
+/* --- 인풋 --- */
+.input-dark {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+.input-dark::placeholder {
+  color: #666;
+}
+.input-dark:focus {
+  border-color: #e67e22;
+}
+
+.select-dark {
+  padding: 10px 15px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.select-dark:focus {
+  border-color: #e67e22;
+}
+
+/* --- 테이블 --- */
+.table-dark {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 20px;
+}
+.table-dark th {
+  padding: 15px;
+  border-bottom: 2px solid #e67e22;
+  color: #e67e22;
+  text-align: left;
+}
+.table-dark td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ccc;
+}
+.table-dark tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+.table-dark .notice-row {
+  background: rgba(230, 126, 34, 0.05);
+  font-weight: bold;
+  color: #ff9f43;
+}
+
+/* --- 달력 그리드 --- */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+.calendar-day-header {
+  color: #e67e22;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+.calendar-day {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  min-height: 110px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  transition: border-color 0.2s, background 0.2s;
+}
+.calendar-day:hover {
+  border-color: rgba(230, 126, 34, 0.4);
+  background: rgba(230, 126, 34, 0.05);
+}
+.calendar-day.today {
+  background: rgba(230, 126, 34, 0.1);
+  border: 2px solid #e67e22;
+}
+.calendar-day.inactive {
+  opacity: 0.5;
+  cursor: default;
+}
+.calendar-day-num {
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* --- 모달 --- */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-box {
+  background: #222;
+  width: 500px;
+  max-width: 95vw;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e67e22;
+}
+.modal-header {
+  color: #e67e22;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* --- 뱃지 --- */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.badge-orange { background: #e67e22; color: #fff; }
+.badge-green  { background: #27ae60; color: #fff; }
+.badge-red    { background: #e74c3c; color: #fff; }
+
+/* --- 페이지네이션 --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+.page-item {
+  padding: 8px 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaa;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.page-item:hover { background: rgba(255, 255, 255, 0.1); }
+.page-item.active { background: #e67e22; color: #fff; }
+
+/* --- 로그인/회원가입 폼 공통 --- */
+.auth-bg {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.auth-overlay {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.auth-box {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  max-width: 95vw;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: #fff;
+}
+.auth-input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+.auth-input::placeholder { color: #888; }
+.auth-input:focus { border-bottom-color: #e67e22; }
+.auth-btn {
+  width: 100%;
+  padding: 15px;
+  background: #e67e22;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.auth-btn:hover { background: #d35400; }
+.auth-links {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #bbb;
+}
+.auth-links a {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: bold;
+}
+.auth-links a:hover { text-decoration: underline; }
+
+/* --- 칼로리 표시 박스 --- */
+.kcal-display {
+  background: rgba(230, 126, 34, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #e67e22;
+  margin-bottom: 20px;
+}
+.kcal-display .label { font-size: 0.9rem; color: #ffd700; }
+.kcal-display .value { margin: 10px 0 0; font-size: 1.8rem; font-weight: bold; }
+
+/* --- 검색바 --- */
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+/* --- 반응형 --- */
+@media (max-width: 768px) {
+  .glass-box { padding: 20px; }
+  .calendar-grid { gap: 5px; }
+  .calendar-day { min-height: 80px; padding: 6px; }
+  .modal-box { padding: 20px; }
+  .auth-box { padding: 30px 20px; }
+}

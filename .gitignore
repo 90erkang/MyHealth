@@ -1,0 +1,20 @@
+# Node.js (Frontend)
+node_modules/
+npm-debug.log
+build/
+dist/
+.env
+
+# Gradle (Backend)
+.gradle/
+build/
+out/
+bin/
+!gradle-wrapper.jar
+
+# IDE & OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db

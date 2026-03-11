@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/myhealth?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+    username: root
+    password: '1234'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: gangd515@gmail.com
+    password: 'drxt ydvs wpnz jquk'   # 구글 앱 비밀번호 16자리
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+app:
+  frontend-url: http://myhealth90.online
+server:
+  port: 8080
+
+# ✅ JWT 설정
+jwt:
+  secret: myHealthSuperSecretKeyForJWT2026MustBe256BitsLongAtLeast!!
+  expiration: 86400000  # 24시간 (ms)
+
+# 🔥 [추가] 구글 피트니스 API 설정
+google:
+  client-id: 633364696564-uli3mc186vnaps06jn0fn3qokb24t27l.apps.googleusercontent.com
+  client-secret: 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
+  redirect-uri: http://myhealth90.online/callback.html

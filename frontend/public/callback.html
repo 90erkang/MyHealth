@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Google 인증 완료</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          background: #0f0f1a;
+          color: white;
+          font-family: sans-serif;
+          gap: 12px;
+        }
+        .icon {
+          width: 48px; height: 48px;
+          border-radius: 14px;
+          background: rgba(66,133,244,0.2);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 24px; color: #4285F4;
+        }
+        p { color: #aaa; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+<div class="icon">G</div>
+<p>인증 완료! 창이 닫힙니다...</p>
+
+<script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const code  = params.get('code');
+      const error = params.get('error');
+
+      if (window.opener) {
+        if (code) {
+          // ✅ 부모 창(Main.jsx)으로 code 전달
+          window.opener.postMessage(
+            { type: 'GOOGLE_AUTH_CODE', code: code },
+            window.location.origin
+          );
+        } else {
+          window.opener.postMessage(
+            { type: 'GOOGLE_AUTH_ERROR', error: error || 'unknown' },
+            window.location.origin
+          );
+        }
+      }
+
+      // ✅ 바로 닫기
+      window.close();
+    })();
+</script>
+</body>
+</html>
